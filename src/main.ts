@@ -42,18 +42,18 @@ interface Theme {
 
 const theme_configs: ThemeConfig[] = [
   {
-    name: "Blue",
+    name: "Marine",
     col: {
       rich: '#1166ff',
       dull: '#aaddff',
-      dark: '#4466aa',
-      light: '#22ddff',
+      dark: '#4499bb',
+      light: '#88eedd',
       mid: '#55aaff',
-      deep_accent: '#0055bb',
+      deep_accent: '#0066aa',
     }
   },
   {
-    name: "Green",
+    name: "Meadow",
     col: {
       rich: '#33cc11',
       dull: '#aacc99',
@@ -64,7 +64,29 @@ const theme_configs: ThemeConfig[] = [
     },
   },
   {
-    name: "Grey",
+    name: "Molten",
+    col: {
+      rich: '#dd4411',
+      dull: '#eecc88',
+      dark: '#aa5500',
+      light: '#ffccaa',
+      mid: '#ff9955',
+      deep_accent: '#882200',
+    },
+  },
+  {
+    name: "Magic",
+    col: {
+      rich: '#cc55aa',
+      dull: '#ddaadd',
+      dark: '#9955ff',
+      light: '#ffaaff',
+      mid: '#bb55ff',
+      deep_accent: '#8800aa',
+    },
+  },
+  {
+    name: "Moonlight",
     col: {
       rich: '#ffffff',
       dull: '#aaaaaa',
@@ -79,7 +101,7 @@ const theme_configs: ThemeConfig[] = [
 let makeTheme: (t: ThemeConfig) => Theme;
 
 makeTheme = t => ({
-  name: "Themed Themes: Max " + t.name,
+  name: "TT Max " + t.name,
   file: path.join(outputDir, makeFilename(t.name)),
   colorSet: {
     base: {
@@ -120,11 +142,15 @@ theme_configs.forEach(t => {
   generateTheme(theme.name, theme.colorSet, theme.file);
 });
 
+// Copy icon.png
+fs.copyFileSync(path.join(__dirname, "icon.png"), path.join(outputDir, "icon.png"));
+
 // Generate extension manifest file
 const package_json = {
   "name": "themed-themes-max",
   "displayName": "Themed Themes Max",
-  "publisher": "Maxwell Clarke",
+  "author": "Maxwell Clarke",
+  "publisher": "maxwell-clarke-intranel",
   "description": "A colour coordinated set of themes. Now you can have different but consistent themes for different workspaces.",
   "version": "0.1.0",
   "license": "MIT",
@@ -140,7 +166,8 @@ const package_json = {
       "uiTheme": "vs-dark",
       "path": makeFilename(t.name),
     })),
-  }
+  },
+  "icon": "icon.png",
 };
 
 fs.writeFileSync(path.join(outputDir, "package.json"), JSON.stringify(package_json, null, 2));
