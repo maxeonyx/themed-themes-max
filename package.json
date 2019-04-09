@@ -1,32 +1,20 @@
 {
-  "name": "generated-theme",
-  "displayName": "Generated Theme",
-  "publisher": "your-name",
-  "description": "A generated theme for Visual Studio Code",
-  "version": "0.0.1",
+  "name": "themed-themes-max-generator",
+  "displayName": "Themed Themes Max (generator)",
+  "publisher": "Maxwell Clarke",
+  "description": "The theme generator for the \"Themed Themes Max\" theme pack.",
+  "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "prestart": "tsc index.ts",
-    "start": "node index.js"
+    "start": "ts-node src/main.ts"
   },
   "engines": {
-    "vscode": "^1.11.0"
+    "node": "^11.13.0"
   },
-  "categories": [
-    "Themes"
-  ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "Generated theme",
-        "uiTheme": "vs-dark",
-        "path": "./theme.json"
-      }
-    ]
-  },
-  "devDependencies": {
-    "@types/node": "^7.0.10",
+  "dependencies": {
+    "@types/node": "^11.13.2",
+    "ts-node": "^8.0.3",
     "typescript": "^2.2.1",
-    "vscode-theme-generator": "*"
+    "vscode-theme-generator": "^0.0.21"
   }
 }
