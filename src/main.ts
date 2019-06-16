@@ -2,10 +2,22 @@ import * as path from 'path';
 import * as fs from 'fs';
 import { generateTheme, IColorSet } from 'vscode-theme-generator'
 
+
+/*
+
+This package generates a VS Code extension into `dist/` which provides 5 different but
+consistent themes.
+
+A VS Code extension consists of a package.json, an icon.png and any resources
+(such as theme json files) that the extension requires.
+
+*/
+
+
 const outputDir = path.join(__dirname, "..", "dist");
 fs.mkdirSync(outputDir, { recursive: true });
 
-const makeFilename = (name: string) => "max-" + name.toLowerCase() + ".json";
+const makeFilename = (name: string) => name.toLowerCase() + ".json";
 
 const col = {
   black: {
@@ -95,7 +107,7 @@ const theme_configs: ThemeConfig[] = [
       mid: '#dddddd',
       deep_accent: '#111111',
     },
-  }
+  },
 ];
 
 let makeTheme: (t: ThemeConfig) => Theme;
