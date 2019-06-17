@@ -164,7 +164,7 @@ const package_json = {
   "author": "Maxwell Clarke",
   "publisher": "maxwell-clarke-intranel",
   "description": "A colour coordinated set of themes. Now you can have different but consistent themes for different workspaces.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "repository": "https://github.com/maxwell-clarke-intranel/themed-themes-max-generator",
   "engines": {

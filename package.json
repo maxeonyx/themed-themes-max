@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/maxwell-clarke-intranel/themed-themes-max-generator"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/main.ts"
