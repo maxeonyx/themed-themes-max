@@ -3,6 +3,9 @@
   "displayName": "Themed Themes Max (generator)",
   "publisher": "Maxwell Clarke",
   "description": "The theme generator for the \"Themed Themes Max\" theme pack.",
+  "repository": {
+    "url": "https://github.com/maxwell-clarke-intranel/themed-themes-max-generator"
+  },
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

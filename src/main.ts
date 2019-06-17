@@ -166,6 +166,7 @@ const package_json = {
   "description": "A colour coordinated set of themes. Now you can have different but consistent themes for different workspaces.",
   "version": "0.1.0",
   "license": "MIT",
+  "repository": "https://github.com/maxwell-clarke-intranel/themed-themes-max-generator",
   "engines": {
     "vscode": "^1.11.0"
   },
