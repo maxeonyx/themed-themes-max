@@ -6,7 +6,7 @@
   "repository": {
     "url": "https://github.com/maxeonyx/themed-themes-max"
   },
-  "version": "0.1.1",
+  "version": "0.1.5",
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/main.ts"

@@ -161,7 +161,7 @@ fs.copyFileSync(path.join(__dirname, "marine.png"), path.join(outputDir, "marine
 fs.copyFileSync(path.join(__dirname, "meadow.png"), path.join(outputDir, "meadow.png"));
 fs.copyFileSync(path.join(__dirname, "molten.png"), path.join(outputDir, "molten.png"));
 fs.copyFileSync(path.join(__dirname, "moonlight.png"), path.join(outputDir, "moonlight.png"));
-fs.copyFileSync(path.join(__dirname, "readme.md"), path.join(outputDir, "readme.md"));
+fs.copyFileSync(path.join(__dirname, "../readme.md"), path.join(outputDir, "readme.md"));
 
 // Generate extension manifest file
 const package_json = {
@@ -170,7 +170,7 @@ const package_json = {
   "author": "Maxwell Clarke",
   "publisher": "maxeonyx",
   "description": "A colour coordinated set of themes. Now you can have different but consistent themes for different workspaces.",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "license": "MIT",
   "repository": "https://github.com/maxeonyx/themed-themes-max",
   "engines": {
