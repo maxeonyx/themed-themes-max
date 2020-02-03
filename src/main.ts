@@ -132,7 +132,7 @@ makeTheme = t => ({
       comment: t.col.dark,
       keyword: t.col.mid,
       string: t.col.light,
-      type:  t.col.dark,
+      type: t.col.dark,
       storage: t.col.rich,
       function: t.col.mid,
       functionCall: t.col.mid,
@@ -156,17 +156,23 @@ theme_configs.forEach(t => {
 
 // Copy icon.png
 fs.copyFileSync(path.join(__dirname, "icon.png"), path.join(outputDir, "icon.png"));
+fs.copyFileSync(path.join(__dirname, "magic.png"), path.join(outputDir, "magic.png"));
+fs.copyFileSync(path.join(__dirname, "marine.png"), path.join(outputDir, "marine.png"));
+fs.copyFileSync(path.join(__dirname, "meadow.png"), path.join(outputDir, "meadow.png"));
+fs.copyFileSync(path.join(__dirname, "molten.png"), path.join(outputDir, "molten.png"));
+fs.copyFileSync(path.join(__dirname, "moonlight.png"), path.join(outputDir, "moonlight.png"));
+fs.copyFileSync(path.join(__dirname, "readme.md"), path.join(outputDir, "readme.md"));
 
 // Generate extension manifest file
 const package_json = {
   "name": "themed-themes-max",
   "displayName": "Themed Themes Max",
   "author": "Maxwell Clarke",
-  "publisher": "maxwell-clarke-intranel",
+  "publisher": "maxeonyx",
   "description": "A colour coordinated set of themes. Now you can have different but consistent themes for different workspaces.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
-  "repository": "https://github.com/maxwell-clarke-intranel/themed-themes-max-generator",
+  "repository": "https://github.com/maxeonyx/themed-themes-max",
   "engines": {
     "vscode": "^1.11.0"
   },
